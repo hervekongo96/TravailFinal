@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <%- include('head') -%>
+
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <%- include('app-menu') -%>
+    <!--MAIN HEADER AREA END -->
+
+    <!--MAIN BANNER AREA START -->
+    <div class="page-banner-area page-contact" id="page-banner">
+        <div class="overlay dark-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+                    <div class="banner-content" style="padding-top: 80px">
+                        <h1 class="text-white">Contactez-nous, restez <br> et soyez informé...</h1>
+                        <p>Informez-nous sur votre préoccupation et recevez une réponse dans un temps record</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MAIN HEADER AREA END -->
+
+    <!--  Contact START  -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 col-md-12">
+                    <div class="mb-5">
+                        <h2 class="mb-2">Contactez-nous</h2>
+                        <p>Informez-nous sur vos besoins et vos suggestions en envoyant votre message, aidez-nous à améliorer la qualité de nos services</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7 col-sm-12">
+                    <form class="contact__form" method="post" action="send-email">
+                        <!-- form message -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-success contact__msg" style="display: none" role="alert">
+                                    Your message was sent successfully.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end message -->
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input name="Name" type="text" class="form-control" placeholder="Nom" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input name="Email" type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input name="Subject" type="text" class="form-control" placeholder="Sujet" required>
+                            </div>
+                            <div class="col-12 form-group">
+                                <textarea name="Body" class="form-control" rows="6" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <input name="submit" type="submit" class=" btn btn-hero btn-circled" value="Envoyer">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-lg-5 pl-4 mt-4 mt-lg-0">
+                    <h4>Adresse de bureau</h4>
+                    <p class="mb-3">4, Avenue Pumbu, Gombe, Kinshasa, Rép. Dém. du congo <br><span>Réf: Derière le palais de la Justice</p>
+                    <h4>Informations de contact</h4>
+                    <p class="mb-3">+243 808 590 018</p>
+                    <h4>E-mail de contact</h4>
+                    <p class="mb-3">p.kongo@activa-rdc.com</p>
+                </div>
+        </div>
+    </section>
+
+    <!--  FOOTER AREA START  -->
+    <%- include('footer') -%>
+    <!--  FOOTER AREA END  -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <%- include('app-script') -%>
+
+</body>
+
+</html>

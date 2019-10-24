@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <%- include('head') -%>
+
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+    <!--MAIN HEADER AREA END -->
+    <%- include('app-menu') -%>
+    <!--MAIN HEADER AREA END -->
+
+    <!--MAIN BANNER AREA START -->
+    <div class="page-banner-area page-blog" id="page-banner">
+        <div class="overlay dark-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+                    <div class="banner-content content-padding" style="padding-top: 100px">
+                        <h1 class="banner-title">Nous faire confiance, vous sécurise</h1>
+                        <p>Nous somme ceux à qui vous pouvez donner confiance pour votre sécurité. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MAIN HEADER AREA END -->
+
+    <!--  Blog AREA START  -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row mover">
+                <div class="col-lg-8">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="blog-post">
+                                <img src="assets/img/blog/doleances.jpg" alt="" class="img-fluid">
+                                <div style="padding: 20px"></div>
+                                <!-- <div class="mt-4 mb-3 d-flex">
+                                    <div class="post-author mr-3">
+                                        <i class="fa fa-user"></i>
+                                        <span class="h6 text-uppercase">John mackel</span>
+                                    </div>
+
+                                    <div class="post-info">
+                                        <i class="fa fa-calendar-check"></i>
+                                        <span>19 jun 18</span>
+                                    </div>
+                                </div> -->
+                                <a href="#" class="h4 ">Assurez-vous, et avancez en toute sécurité</a>
+                                <p class="mt-3">Notre Réseau GLOBUS créé par ACTIVA en 2007, est aujourd’hui présent dans 48 pays confortant ainsi sa place de premier réseau panafricain d’assurance en Afrique. La compagnie de réassurance captive de notre réseau, GLOBUS RE a vu son chiffre d’affaires s’améliorer ainsi que ses différents indicateurs financiers. </p>
+                                <a href="#" class="read-more">Voir plus ...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div style="padding-left: 20px">
+                                <div class="mb-5">
+                                    <h2 class="mb-2">Exprimez-vous</h2>
+                                    <!-- <p>Informez-nous sur vos besoin et vos suggestions en envoyant votre message tout en decrivant le produit concerné sur le message.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div >
+                                <form class="contact__form" method="post" action="mail.php">
+                                    <!-- form message -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="alert alert-success contact__msg" style="display: none" role="alert">
+                                                Your message was sent successfully.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end message -->
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <input name="name" type="text" class="form-control" placeholder="Nom" required>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <input name="email" type="email" class="form-control" placeholder="Email" required>
+                                        </div>
+                                        <div class="col-md-12 form-group">
+                                            <input name="subject" type="text" class="form-control" placeholder="Subjet" required>
+                                        </div>
+                                        <div class="col-md-12 form-group">
+                                            <input name="subject" type="text" class="form-control" list="citynames"  placeholder="Selectionner un Service" required>
+                                            <!-- <input class="input100" type="text" name="city" placeholder="Code année accademique"> -->
+                                            <datalist id="citynames">
+                                                <option value="ACTIVA Assistance Voyage & Évacuation">
+                                                <option value="ACTIVA Assurance Automobile">
+                                                <option value="ACTIVA Aviation">
+                                                <option value="ACTIVA Caution">
+                                                <option value="ACTIVA Corps de Navire">
+                                                <option value="ACTIVA Corps Ferroviaires">
+                                                <option value="ACTIVA Crédit">
+                                                <option value="ACTIVA Facultés">
+                                                <option value="ACTIVA Globale des banques">
+                                                <option value="ACTIVA Incendie & Risques Assimilés">
+                                                <option value="ACTIVA Individuelle Accidents">
+                                                <option value="ACTIVA Multirisques Entreprise">
+                                                <option value="ACTIVA Multirisques Habitation">
+                                                <option value="ACTIVA Protection Juridique">
+                                                <option value="ACTIVA Responsabilité Décennale">
+                                                <option value="ACTIVA Responsabilité Civile">
+                                                <option value="ACTIVA Transport">
+                                                <option value="ACTIVA Risques Politiques">
+                                                <option value="ACTIVA Santé">
+                                                <option value="ACTIVA Tous Risques Chantier / Montage Essai">
+                                                <option value="Autres">
+                                            
+                                            </datalist>
+                                        </div>
+                                        <div class="col-12 form-group">
+                                            <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                                        </div>
+                                        <div class="col-12 mt-4">
+                                            <input name="submit" type="submit" class=" btn btn-hero btn-circled" value="Envoyer">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- BlOG SIDEBAR -->
+                <div class="col-lg-4">
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <div class="sidebar-widget about-bar">
+                                <h5 class="mb-3">Notre volonté</h5>
+                                <p>intégrer des profils variés, offrir des opportunités de carrières diversifiées et développer vos compétences, dès votre intégration et tout au long de votre parcours.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="sidebar-widget download">
+                                <h5 class="mb-4">Produits particuliers</h5>
+                            </div>
+                            <div class="sidebar-widget tag">
+                                <a href="#">Automobile du particulier</a>
+                                <a href="#">Individuelle accidents du particulier</a>
+                                <a href="#">Multirisque habitation MRH</a>
+                                <a href="#">RC du particulier ou RC Chef de famille</a>
+                                <a href="#">RC du propriétaire d’immeuble</a>
+                                <a href="#">Sécurité scolaire</a>
+                                
+                            </div>
+                            <div class="sidebar-widget download">
+                                <h5 class="mb-4">Produits des entreprises</h5>
+                            </div>
+                            <div class="sidebar-widget tag">
+                                <a href="#">Automobile des entreprises</a>
+                                <a href="#">Assurances constructions (tous risques chantier)</a>
+                                <a href="#">Multirisques professionnelle PME – PMI Grandes entreprises</a>
+                                <a href="#">Responsabilité civile chef d’entreprise</a>
+                                <a href="#">Responsabilité civile des écoles (RC scolaires)</a>
+                                <br><br>
+                                <a href="services" class="read-more">Voir plus ...</a>
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-12">
+                            <div class="sidebar-widget download">
+                                <h5 class="mb-4">Download Files</h5>
+                                <a href="#"> <i class="fa fa-file-pdf"></i>Company Manual</a>
+                                <a href="#"> <i class="fa fa-file-pdf"></i>Company Profile</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  Blog AREA End -->
+    <div style="padding:100px">
+
+    </div>
+    <!--  FOOTER AREA START  -->
+    <%- include('footer') -%>
+    <!--  FOOTER AREA END  -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <%- include('app-script') -%>
+
+</body>
+
+</html>

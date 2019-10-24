@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <%- include('head') -%>
+
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+    <!--MAIN HEADER AREA -->
+        <%- include('app-menu') -%>
+    <!--MAIN HEADER AREA END -->
+    <!--MAIN BANNER AREA START -->
+    <!-- <div class="page-banner-area page-blog" id="page-banner">
+        <div class="overlay dark-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+                    <div class="banner-content content-padding">
+                        <h1 class="banner-title">Blog Details</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, perferendis?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--MAIN HEADER AREA END -->
+
+    <!--  Blog AREA START  -->
+    <div style="padding: 40px"></div>
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="blog-post">
+                                <!-- <div class="mt-4 mb-3 d-flex">
+                                    <div class="post-author mr-3">
+                                        <i class="fa fa-user"></i>
+                                        <span class="h6 text-uppercase">John mackel</span>
+                                    </div>
+
+                                    <div class="post-info">
+                                        <i class="fa fa-calendar-check"></i>
+                                        <span>19 jun 18</span>
+                                    </div>
+                                </div> -->
+                                <div style="padding: 20px"></div>
+                                <a href="#" class="h4 ">Resultats du recherche</a>
+                                
+                                <blockquote class="quote">
+                                    <i class="fa fa-quote-left"></i>
+                                    <% if (result.length > 0) {%>
+                                        Voici le resultats associé à : <br> <b><%=subject%></b>
+                                    <%} else {%>
+                                        Aucun resultat associé à : <br> <b><%=subject%></b>
+                                    <%}%>
+                                </blockquote>
+
+                                <% result.forEach(element => {%>
+                                    <div style="padding: 5px"></div>
+                                    <div style="padding: 5px"></div>
+                                    <a href="/services/<%=element.key%>" class="h6"><%=element.value.title%></a>
+                                    <div style="padding: 5px"></div>
+                                    <p><%=element.value.def%>..</p>                                
+                                <%})%>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <!-- BlOG SIDEBAR -->
+                <div class="col-lg-4">
+                    <div class="row">
+                        <!-- <div class="col-lg-12">
+                            <div class="sidebar-widget about-bar">
+                                <h5 class="mb-3">About us</h5>
+                                <p>Nostrum ullam porro iusto. Fugit eveniet sapiente nobis nesciunt velit cum fuga doloremque dignissimos asperiores</p>
+                            </div>
+                        </div> -->
+
+                        <div class="col-lg-12">
+                            <div class="sidebar-widget download">
+                                <h5 class="mb-4">Produits particuliers</h5>
+                            </div>
+                            <div class="sidebar-widget tag">
+                                <a href="#">Automobile du particulier</a>
+                                <a href="#">Multirisque habitation MRH</a>
+                                <a href="#">RC du particulier ou RC Chef de famille</a>
+                                <a href="#">Sécurité scolaire</a>
+                                <a href="#">RC du propriétaire d’immeuble</a>
+                                <a href="#">Individuelle accidents du particulier</a>
+                            </div>
+                            <div class="sidebar-widget download">
+                                <h5 class="mb-4">Produits des entreprises</h5>
+                            </div>
+                            <div class="sidebar-widget tag">
+                                <a href="#">Automobile des entreprises</a>
+                                <a href="#">Multirisques professionnelle PME – PMI Grandes entreprises</a>
+                                <a href="#">Responsabilité civile chef d’entreprise</a>
+                                <a href="#">Responsabilité civile des écoles (RC scolaires)</a>
+                                <a href="#">Assurances constructions (tous risques chantier)</a>
+                                <br><br>
+                                <a href="blog-single.html" class="read-more">Voir plus ...</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="sidebar-widget download">
+                                <h5 class="mb-4">Télécharger les fichiers</h5>
+                                <a href="#"> <i class="fa fa-file-pdf"></i>Manuel d'Activa</a>
+                                <a href="#"> <i class="fa fa-file-pdf"></i>Profile d'utilisateur</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  Blog AREA End -->
+
+    <!--  FOOTER AREA START  -->
+    <%- include('footer') -%>
+    <!--  FOOTER AREA END  -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <%- include('app-script') -%>
+
+</body>
+
+</html>
