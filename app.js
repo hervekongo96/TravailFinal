@@ -1,41 +1,112 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+let express=require("express");
+let app =express();
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+app.listen(3000);// création du port 
+app.set('view engine','ejs') // moteur de lecture de page html
 
-var app = express();
+// nos middlwares
+app.use('/',express.static("public"))
+app.use(express.json())   
+app.use(express.urlencoded({extended:false}))
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+//nos root
+app.get('/modifier/:Identifiant',function(req,res){
+  res.render('modifier')
+              })
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname + '/public')));
+app.get('/supprimer/:Identifiant',function(req,res){
+      var a = req.params.Identifiant
+          console.log(a)
+            let tous = require('./models/ajout')
+             tous.supprimer(a,function(){
+                res.redirect('/News')
+                })
+              })
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+                    app.post('/Modifier/:Identifiant', function(req,res){
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+                              let c = req.params.Identifiant
 
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+                              var tout ={
+                                'Matricule' : req.body.Matricule,
+                                'Nom' : req.body.Nom,
+                                'Postnom' : req.body.Postnom,
+                                'Prenom' : req.body.Prenom,
+                                'Sexe' : req.body.Sexe,
+                                'Qualification' : req.body.Qualification,
+                                'Code_Salaire' : req.body.Code_Salaire,
+                                'Salaire_Net' : req.body.Salaire_Net,
+                                'Retraite_Complementaire' : req.body.Retraite_Complementaire,
+                                'Devise': req.body.Devise
+                              }
+                              console.log(tout)
+                              let tous = require('./models/ajout')
+                                  tous.modifier(c,tout.Matricule,tout.Nom,tout.Postnom,tout.Prenom,tout.Sexe,tout.Qualification,tout.Code_Salaire,tout.Salaire_Net,tout.Retraite_Complementaire,tout.Devise, function(){
+                                  res.redirect('/News')
+                                  
+                                    })
+                                })
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
 
-app.listen(3000);
+app.get('/www.hervekongo.hk@gmail.com',function(req,res){
+res.render('login')
+            })
+            
+app.get('/accueil',function(req,res){
+ 
+       res.render('accueil')
+             })
+
+app.get('/News', function(req,res){
+
+
+  var tous = require('./models/ajout')
+      tous.afficher(function(bulletin){
+            res.render('index',{ bulletins : bulletin})
+      })
+
+})
+app.post('/News', function(req,res){
+
+  var tout ={
+    'Matricule' : req.body.Matricule,
+    'Nom' : req.body.Nom,
+    'Postnom' : req.body.Postnom,
+    'Prenom' : req.body.Prenom,
+    'Sexe' : req.body.Sexe,
+    'Qualification' : req.body.Qualification,
+    'Code_Salaire' : req.body.Code_Salaire,
+    'Salaire_Net' : req.body.Salaire_Net,
+    'Retraite_Complementaire' : req.body.Retraite_Complementaire,
+    'Devise': req.body.Devise
+  }
+  console.log(tout)
+  let tous = require('./models/ajout')
+      tous.ajouter(tout.Matricule,tout.Nom,tout.Postnom,tout.Prenom,tout.Sexe,tout.Qualification,tout.Code_Salaire,tout.Salaire_Net,tout.Retraite_Complementaire,tout.Devise, function(){
+      res.redirect('/News')
+      
+        })
+    })
+
+ app.post('/www.hervekongo.hk@gmail.com',function(req,res){
+     let info={
+         'nom':req.body.user,
+         'key':req.body.key
+     }
+     console.log(info)
+           
+     if(info.nom === 'herve' && info.key ==='sam96'){
+
+        res.redirect('/News')
+     }else{
+       
+       res.redirect('/www.hervekongo.hk@gmail.com')
+
+     } 
+
+          
+             })
+            
+
+                    
+            

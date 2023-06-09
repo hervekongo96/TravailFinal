@@ -1,0 +1,71 @@
+<!doctype html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>NewApplication CNSS </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/style2.css">
+        <link href="https://fonts.google.com/icon?familly=waterial" rel="stylesheet">
+       
+    </head>
+    <body>
+              <div class="">
+                <h1>MODIFICATION DE BULETIN ENREGISTRER DANS LA BASE DEDONNEES</h1>
+              </div>
+              <div class="">
+ <form action="/Modifier/<%= bulletin.Identifiant %>" method="POST">
+                          </br></br>
+                                      <input name="Matricule" type="text" class="form-control" id="name" value='<%=bulletin.Matricule%>' placeholder="Matricule" required></br></br>
+                                                                       
+                                      <input name="Nom" type="text" class="form-control" id="name" value='<%=bulletin.Nom%>' placeholder="Nom" required></br></br>
+                                                                        
+                                      <input name="Postnom" type="text" class="form-control" id="name" value='<%=bulletin.Postnom%>' placeholder="Postnom" required></br></br>
+                                    
+                                      <input name="Prenom" type="text" class="form-control" id="name" value='<%=bulletin.Prenom%>' placeholder="Prenom" required></br></br>
+                                    
+                                      <input name="Sexe" type="text" class="form-control" id="name" value='<%=bulletin.Sexe%>' placeholder="Sexe" required></br></br>
+                                   
+                                       <input name="Qualification" type="text" class="form-control" id="name" value='<%=bulletin.Qualification%>' placeholder="Qualification" required></br></br>
+                                    
+                                       <input name="Code_Salaire" type="text" class="form-control" id="name" value='<%=bulletin.Code_Salaire%>' placeholder="Code Salaire" required></br></br>
+                                     
+                                       <input name="Salaire_Net" type="text" class="form-control" id="name" value='<%=bulletin.Salaire_Net%>' placeholder="Salaire net" required></br></br>
+                                     
+                                       <input name="Retraite_Complementaire" type="text" class="form-control" id="name" value='<%=bulletin.Retraite_Complementaire%>' placeholder="Retraite Complementaire" required></br></br>
+                                    
+                                      <input name="Devise" type="text" class="form-control" id="name" value='<%=bulletin.Devise%>' placeholder="Devise" required></br></br>
+                                   <div class="para">
+                                    
+                                    <input type="Submit" id="form-submit" name="" class="btn" value="Modifier">
+                                   </div>
+                                      
+                                   
+                          </form>
+                          
+              </div>
+           
+              <footer id="fh5co-footer" class="fh5co-bg" style="background-image: url(/img_bg_1.jpg);" role="contentinfo">
+		
+                <div class="container">
+                  <div class="row row-pb-md">
+                    <div class="col-md-4 fh5co-widget">
+                      <h3>A Propos de Retraités de la caisse national de securité sociale (CNSS) </h3>
+                      <p>Retraité-CNSS est une application web pour la gestion de retraités au sein de la Caisse National de Securité Sociale en République Démocratique du Congo</p>
+                      </div>
+                  </div>
+            
+                  <div class="row copyright">
+                    <div class="col-md-12 text-center">
+                      <p>
+                        <small class="block">&copy; 2019 Masambukidi</small> 
+                        <small class="block">Designed by : <a href="#" target="_white" style="color:#324972">Herve Kongo</a></small>
+                      </p>
+                    </div>
+                  </div>
+            
+                </div>
+              </footer>
+    </body>
+</html>
